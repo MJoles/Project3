@@ -1,4 +1,3 @@
-import React from 'react';
 import Nav from '../components/Nav';
 import React, { Component } from "react";
 import Jumbotron from "../../components/Jumbotron";
