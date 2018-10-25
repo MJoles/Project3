@@ -1,48 +1,37 @@
-import React from 'react';
-import Nav from '../components/Nav';
 import React, { Component } from "react";
-import Jumbotron from "../../components/Jumbotron";
-import { Col, Row, Container } from "../../components/Grid";
-import { List, ListItem } from "../../components/List";
-import { Input, TextArea, FormBtn } from "../../components/Form";
+// import Nav from '../components/Nav';
+import Jumbotron from "../components/Jumbotron";
+import { Col, Row, Container } from "../components/Grid";
+// import { List, ListItem } from "../../components/List";
+import Input from "../components/Input";
 
 class Home extends Component {
 
   render() {
     return (
-      <Container fluid>
+      <Container>
         <Row>
           <Col size="md-6">
             <Jumbotron>
-              <h1>What Books Should I Read?</h1>
+              <h1>Sign up</h1>
             </Jumbotron>
             <form>
-              <Input name="title" placeholder="Title (required)" />
-              <Input name="author" placeholder="Author (required)" />
-              <TextArea name="synopsis" placeholder="Synopsis (Optional)" />
-              <FormBtn>Submit Book</FormBtn>
+              <Input name="f_name" placeholder="First Name (required)" />
+              <Input name="l_name" placeholder="Last Name (required)" />
+              <Input name="email" placeholder="Email (required)" />
+              <Input name="password" placeholder="Password (required)" />
+              {/* <FormBtn>Submit Book</FormBtn> */}
             </form>
           </Col>
           <Col size="md-6 sm-12">
             <Jumbotron>
-              <h1>Books On My List</h1>
+              <h1>Log in</h1>
             </Jumbotron>
-            {this.state.books.length ? (
-              <List>
-                {this.state.books.map(book => (
-                  <ListItem key={book._id}>
-                    <a href={"/books/" + book._id}>
-                      <strong>
-                        {book.title} by {book.author}
-                      </strong>
-                    </a>
-                    <DeleteBtn />
-                  </ListItem>
-                ))}
-              </List>
-            ) : (
-              <h3>No Results to Display</h3>
-            )}
+            <form>
+              <Input name="email" placeholder="Email" />
+              <Input name="password" placeholder="Password" />
+              {/* <FormBtn>Submit Book</FormBtn> */}
+            </form>
           </Col>
         </Row>
       </Container>
