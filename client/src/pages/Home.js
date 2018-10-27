@@ -42,15 +42,12 @@ class Home extends Component {
                     </form>
                   </div>
                 </div>
-                        <a href="#!">Create account</a>
+                        <a href="/signup">Create account</a>
               </center>
 
                           <div className="section"></div>
                           <div className="section"></div>
-                      
-            
           </Col>
-    
       </div>
     );
   }
