@@ -11,7 +11,7 @@ class Login extends Component {
         <Nav /> 
           <Col size="md-12">
             <Jumbotron>
-              <h1>Sign up</h1>
+              <h1>UBERHELP!</h1>
             </Jumbotron>
            
             <center>
