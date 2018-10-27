@@ -3,7 +3,7 @@ import Nav from '../components/Nav';
 import Jumbotron from "../components/Jumbotron";
 import { Col, Row} from "../components/Grid";
 
-class Home extends Component {
+class Login extends Component {
 
   render() {
     return (
@@ -53,4 +53,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default Login;
