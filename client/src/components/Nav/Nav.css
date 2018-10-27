@@ -1,4 +1,7 @@
-#nav {
-    color: black
+.nav-wrapper {
+    background-color: black;
+}
 
+#image{
+    height: 55px;
 }
