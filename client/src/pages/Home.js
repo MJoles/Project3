@@ -1,59 +1,38 @@
 import React, { Component } from "react";
-import Nav from '../components/Nav';
 import Jumbotron from "../components/Jumbotron";
 import { Col, Row} from "../components/Grid";
+import Nav from "../components/Nav";
+import "./Pages.css"
 
 class Home extends Component {
-
-  render() {
-    return (
+  render(){
+    return(
       <div>
-        <Nav /> 
-          <Col size="md-12">
+        <Nav text={"USERNAME WILL GO HERE"} />
+        <Col size="md-12">
             <Jumbotron>
-              <h1>Sign up</h1>
+              <h1>UBERHELPS!</h1>
             </Jumbotron>
-           
-            <center>
-              <h5 className="indigo-text">Please, login into your account</h5>
+        </Col>
+          <div>
+            <button type="button" class="btn btn-primary btn-lg btn-block">Job Listings
+            <p id="buttontext">All job postings</p>
+            </button>
+            <br/>
 
-                <div className="container">
-                  <div className="z-depth-1 grey lighten-4 row" >
-                    <form className="col s12" method="post">
+            <button type="button" class="btn btn-primary btn-lg btn-block">Need Help
+            <p id="buttontext">Search job postings</p>
+            </button>
+            <br/>
 
-                      <div className='row'>
-                        <div className='input-field col s12'>
-                          <input className='validate' type='email' name='email' id='email' />
-                          <label for='email'>Enter your email</label>
-                        </div>
-                      </div>
-
-                      <div className='row'>
-                        <div className='input-field col s12'>
-                          <input className='validate' type='password' name='password' id='password' />
-                          <label for='password'>Enter your password</label>
-                        </div>
-                      </div>
-            
-                      <div className='row'>
-                        <button type='submit' name='btn_login' className='col s12 btn btn-large waves-effect indigo'>Login</button>
-                      </div>
-          
-                    </form>
-                  </div>
-                </div>
-                        <a href="#!">Create account</a>
-              </center>
-
-                          <div className="section"></div>
-                          <div className="section"></div>
-                      
-            
-          </Col>
-    
+            <button type="button" class="btn btn-secondary btn-lg btn-block">Offer Help
+            <p id="buttontext">Post a job</p>
+            </button>
+          </div>
       </div>
-    );
+  )
   }
 }
+
 
 export default Home;

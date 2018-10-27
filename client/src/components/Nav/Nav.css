@@ -1,7 +1,13 @@
 .nav-wrapper {
-    background-color: black;
+    background-color: teal;
+}
+
+.text{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%); 
 }
 
 #image{
-    height: 55px;
+    height: 50px;
 }
