@@ -1,11 +1,11 @@
-var mongoose = require("mongoose");
+const mongoose = require("mongoose");
 
 // Save a reference to the Schema constructor
-var Schema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
 // Using the Schema constructor, create a new UserSchema object
 // This is similar to a Sequelize model
-var UserSchema = new Schema({
+const UserSchema = new Schema({
   // `firstName` must be of type String
   // `firstName` will trim leading and trailing whitespace before it's saved
   // `firstName` is a required field and throws a custom error message if not supplied
@@ -84,7 +84,7 @@ UserSchema.methods.lastUpdatedDate = function() {
 };
 
 // This creates our model from the above schema, using mongoose's model method
-var User = mongoose.model("User", UserSchema);
+const User = mongoose.model("User", UserSchema);
 
 // Export the User model
 module.exports = User;
