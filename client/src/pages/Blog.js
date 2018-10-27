@@ -1,21 +1,64 @@
-import React from "react";
+import React, { Component } from "react";
+import Jumbotron from "../components/Jumbotron";
+import { Col, Row} from "../components/Grid";
+import Nav from "../components/Nav";
+import "./Pages.css"
 
-const Blog = () => (
-  <div>
-    <h1>Blog Page</h1>
-    <p>
-      Donec a volutpat quam. Curabitur nec varius justo, sed rutrum ligula. Curabitur pellentesque
-      turpis sit amet eros iaculis, a mollis arcu dictum. Ut vel ante eget massa ornare placerat.
-      Etiam nisl orci, finibus sodales volutpat et, hendrerit ut dolor. Suspendisse porta dictum
-      nunc, sed pretium risus rutrum eget. Nam consequat, ligula in faucibus vestibulum, nisi justo
-      laoreet risus, luctus luctus mi lacus sit amet libero. Class aptent taciti sociosqu ad litora
-      torquent per conubia nostra, per inceptos himenaeos. Mauris pretium condimentum tellus eget
-      lobortis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec placerat
-      accumsan mi, ut congue neque placerat eu. Donec nec ipsum in velit pellentesque vehicula sit
-      amet at augue. Maecenas aliquam bibendum congue. Pellentesque semper, lectus non ullamcorper
-      iaculis, est ligula suscipit velit, sed bibendum turpis dui in sapien.
-    </p>
-  </div>
-);
+class Post extends Component {
 
-export default Blog;
+  render() {
+    return (
+     <div>
+       <Nav />
+          <Col size="md-12">
+            <Jumbotron>
+                <h1>UBERHELPS!</h1>
+            </Jumbotron>
+
+            <center>   
+                <h5 className="indigo-text">Hello, enter the correct info below</h5>
+
+              <div className="container">
+                <div className="z-depth-1 grey lighten-4 row" >
+                  <form className="col s12" method="post">
+                        <div className='row'>
+                            <div className='input-field col s12'>
+                                <input className='validate' type='email' name='job_type' id='job_type' placeholder="Job Type"/>
+                            </div>
+                        </div>
+                        <div className='row'>
+                          <div className='input-field col s6'>
+                            <input className='validate' type='email' name='last_name' id='last_name' placeholder="Last Name" />
+                          </div>
+                        </div>
+                        <div className='row'>
+                            <div className='input-field col s12'>
+                                <input className='validate' type='email' name='first_name' id='first_name' placeholder="Username"/>
+                            </div>
+                        </div>
+                        <div className='row'>
+                            <div className='input-field col s12'>
+                                <input className='validate' type='email' name='email' id='email' placeholder="Enter your email" />
+                              </div>
+                        </div>
+                        <div className='row'>
+                            <div className='input-field col s12'>
+                                <input className='validate' type='password' name='password' id='password' placeholder="Create your password" />
+                              </div>
+                        </div>
+                        <div className='row'>
+                          <button type='submit' name='btn_login' className='col s12 btn btn-large waves-effect indigo'>Login</button>
+                        </div>
+                  </form>
+                </div>
+              </div>
+                <a href="/">Already signed up</a>
+            </center>
+                  <div className="section"></div>
+          </Col>
+     </div>
+    );
+  }
+}
+
+export default Post;
