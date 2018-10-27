@@ -11,7 +11,7 @@ class Home extends Component {
         <Nav text={"USERNAME WILL GO HERE"} />
         <Col size="md-12">
             <Jumbotron>
-              <h1>UBERHELPS!</h1>
+              <h1>UBERHELP!</h1>
             </Jumbotron>
         </Col>
           <div>
