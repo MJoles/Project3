@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-// import Nav from '../components/Nav';
+import Nav from '../components/Nav';
 import Jumbotron from "../components/Jumbotron";
 import { Col, Row, Container } from "../components/Grid";
-// import { List, ListItem } from "../../components/List";
+import { List, ListItem } from "../../components/List";
 import Input from "../components/Input";
 
 class Home extends Component {
