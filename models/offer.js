@@ -9,6 +9,6 @@ const offerSchema = new Schema({
   //date: { type: Date, default: Date.now }
 });
 
-const Register = mongoose.model("Register", offerSchema);
+const Register = mongoose.model("Offer", offerSchema);
 
 module.exports = Offer;
