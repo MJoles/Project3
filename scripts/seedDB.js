@@ -10,10 +10,10 @@ mongoose.connect(
 
 const jobSeed = [
   {
-    jobType: "",
-    jobDescription: "",
-    fee: "",
-    location: "",
+    jobType: "test jobtype",
+    jobDescription: "mow lawn",
+    fee: "10",
+    location: "60602",
     date: new Date(Date.now())
   },
   {
