@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const helpController = require("../../controllers/helpController");
 
-// Matches with "/api/help"
+// Matches with "/api/offers"
 router.route("/needhelp")
   .get(helpController.findAll)
   .post(helpController.create);
