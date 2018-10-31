@@ -23,28 +23,47 @@ class Post extends Component {
                   <form className="col s12" method="post">
                       What type of help do you want to offer?
                         <div className='row'>
-                            <div className='input-field col s12'>
-                                <input className='validate' type='email' name='job_type' id='job_type' placeholder="Job Type"/>
-                            </div>
-                        </div>
-                        <div className='row'>
                           <div className='input-field col s12'>
-                            <textarea className='validate' type='text' name='last_name' id='last_name' placeholder="Job Description" />
+                          <span class="input-group-text"> Select your Job(s)</span>
                           </div>
                         </div>
                         <div className='row'>
-                            <div className='input-field col s12'>
-                                <input className='validate' type='email' name='email' id='email' placeholder="Fee $" />
-                              </div>
+                          <label> 
+                            <input type="checkbox" />
+                              <span>Caprtpentry</span>                  
+                          </label>   
                         </div>
                         <div className='row'>
-                            <div className='input-field col s12'>
-                                <input className='validate' type='text' name='location' id='location' placeholder="Location (City, State)" />
-                            </div>
+                          <label> 
+                            <input type="checkbox" />
+                              <span>Yardwork</span>                  
+                          </label>   
+                        </div>
+                        <div className='row'>
+                          <label> 
+                            <input type="checkbox" />
+                              <span>Electrician</span>                  
+                          </label>   
+                        </div>
+                        <div className='row'>
+                          <label>
+                            <input type="checkbox" />
+                              <span>Plumbing</span>
+                          </label>                                           
+                        </div>
+                        <div className='row'>
+                          <div className='input-field col s12'>
+                            <input className='validate' type='text' name='fee' id='fee' placeholder="Fee $"/>
+                          </div>
+                        </div>
+                        <div className='row'>
+                          <div className='input-field col s12'>
+                            <input className='validate' type='text' name='location' id='location' placeholder="Location (City, State)" />
+                          </div>
                         </div>
                         <div className='row'>
                           <div class="input-field col s12">
-                          <input className='validate' type='tel' name='password' id='password' placeholder="Phone Number (xxx)-xxx-xxxx" />
+                            <input className='validate' type='tel' name='phone_number' id='phone_number' placeholder="Phone Number (xxx)-xxx-xxxx" />
                           </div>
                         </div>
                         <div className='row'>

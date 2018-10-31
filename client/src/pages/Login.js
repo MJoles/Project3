@@ -15,7 +15,7 @@ class Login extends Component {
             </Jumbotron>
            
             <center>
-              <h5 className="indigo-text">Please, login into your account</h5>
+              <h5 className="indigo-text">Welcome back, please login into your account</h5>
 
                 <div className="container">
                   <div className="z-depth-1 grey lighten-4 row" >
@@ -23,15 +23,15 @@ class Login extends Component {
 
                       <div className='row'>
                         <div className='input-field col s12'>
-                          <input className='validate' type='email' name='email' id='email' />
-                          <label for='email'>Enter your email</label>
+                          <input className='validate' type='email' name='email' id='email' placeholder="Enter your email" />
+                          <label for='email'>Email</label>
                         </div>
                       </div>
 
                       <div className='row'>
                         <div className='input-field col s12'>
-                          <input className='validate' type='password' name='password' id='password' />
-                          <label for='password'>Enter your password</label>
+                          <input className='validate' type='password' name='password' id='password' placeholder="Enter your password"/>
+                          <label for='password'>Password</label>
                         </div>
                       </div>
             
