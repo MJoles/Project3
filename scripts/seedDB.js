@@ -59,107 +59,16 @@ const jobSeed = [
     state: "Illinois",
     date: new Date(Date.now())
   },
-  {
-    yardwork: "",
-    carpentry: "",
-    plumbing: "",
-    electrician: "",
-    jobDetails: "",
-    city: "",
-    state: "",
-    date: new Date(Date.now())
-  },
-  {
-    yardwork: "",
-    carpentry: "",
-    plumbing: "",
-    electrician: "",
-    jobDetails: "",
-    city: "",
-    state: "",
-    date: new Date(Date.now())
-  },
-  {
-    yardwork: "",
-    carpentry: "",
-    plumbing: "",
-    electrician: "",
-    jobDetails: "",
-    city: "",
-    state: "",
-    date: new Date(Date.now())
-  },
-  {
-    yardwork: "",
-    carpentry: "",
-    plumbing: "",
-    electrician: "",
-    jobDetails: "",
-    city: "",
-    state: "",
-    date: new Date(Date.now())
-  },
-  {
-    yardwork: "",
-    carpentry: "",
-    plumbing: "",
-    electrician: "",
-    jobDetails: "",
-    city: "",
-    state: "",
-    date: new Date(Date.now())
-  },
-  {
-    yardwork: "",
-    carpentry: "",
-    plumbing: "",
-    electrician: "",
-    jobDetails: "",
-    city: "",
-    state: "",
-    date: new Date(Date.now())
-  },
-  {
-    yardwork: "",
-    carpentry: "",
-    plumbing: "",
-    electrician: "",
-    jobDetails: "",
-    city: "",
-    state: "",
-    date: new Date(Date.now())
-  },
-  {
-    yardwork: "",
-    carpentry: "",
-    plumbing: "",
-    electrician: "",
-    jobDetails: "",
-    city: "",
-    state: "",
-    date: new Date(Date.now())
-  },
-  {
-    jobType: "",
-    jobDescription: "",
-    fee: "",
-    location: "",
-    date: new Date(Date.now())
-  },
-  {
-    jobType: "",
-    jobDescription: "",
-    fee: "",
-    location: "",
-    date: new Date(Date.now())
-  },
-  {
-    jobType: "",
-    jobDescription: "",
-    fee: "",
-    location: "",
-    date: new Date(Date.now())
-  }
+  // {
+  //   yardwork: "",
+  //   carpentry: "",
+  //   plumbing: "",
+  //   electrician: "",
+  //   jobDetails: "",
+  //   city: "",
+  //   state: "",
+  //   date: new Date(Date.now())
+  // }
 ];
 
 db.Offer
