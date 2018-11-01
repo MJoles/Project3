@@ -3,5 +3,7 @@ h1{
 }
 
 .jumbotron{
-    background-image: url("../../images/tools-large-opt.jpg")
+    background-image: url("../../images/tools-large-opt.jpg");
+    width: 100%;
+
 }

@@ -1,5 +1,5 @@
 .nav-wrapper {
-    background-color: teal;
+    background-color: black
 }
 
 .text{
@@ -9,5 +9,9 @@
 }
 
 #image{
-    height: 50px;
+    height: 55px;
+    width: 100px;
+    position: relative;
+    top: 5px
+
 }
