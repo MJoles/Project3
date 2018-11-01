@@ -4,6 +4,9 @@ import Login from "./pages/Login"
 import Signup from "./pages/Signup"
 import Home from "./pages/Home"
 import Post from "./pages/Post"
+import Search from "./pages/Search"
+import View from "./pages/View"
+
 
 const App = () =>
   <Router>
@@ -13,7 +16,9 @@ const App = () =>
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/home" component={Home} />
         <Route exact path="/newjob" component={Post} />
-        {/* <Route exact path="/search" component={Search} /> */}
+        <Route exact path="/search" component={Search} />
+        <Route exact path="/view" component={View} />
+
         {/* <Route component={NoMatch} /> */}
       </Switch>
     </div>
