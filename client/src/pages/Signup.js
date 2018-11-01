@@ -16,7 +16,7 @@ class Signup extends Component {
             </Jumbotron>
 
             <center>   
-              <h5 className="indigo-text">Hello, enter the correct info below</h5>
+              <h5 className="black-text">Hello, enter the correct info below</h5>
 
               <div className="container">
                 <div className="z-depth-1 grey lighten-4 row" >
@@ -43,10 +43,12 @@ class Signup extends Component {
                         <input className='validate' type='email' name='email' id='email' placeholder="Enter your email" />
                           <label for="email">Email</label>
                       </div>
-                    <div className='row'>
+                      <div className='row'>
                         <div className='input-field col s12'>
-                        <span class="input-group-text"> Select your Job(s)</span>
-                        </div>
+                          <span class="input-group-text"> Select your Job(s)</span>
+                        </div>     
+                          <label>Check all that apply</label>
+
                       </div>
                       <div className='row'>
                         <label> 
