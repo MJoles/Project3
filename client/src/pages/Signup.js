@@ -24,23 +24,23 @@ class Signup extends Component {
 
                     <div className='row'>
                       <div class="input-field col s6">
-                        <input id="first_name" type="text" class="validate" placeholder="First"/>
+                        <input name="firstName" id="first_name" type="text" class="validate" placeholder="First"/>
                           <label for="first_name">First Name</label>
                       </div>
                       <div class="input-field col s6">
-                        <input id="last_name" type="text" class="validate" placeholder="Last"/>
+                        <input name="lastName" id="last_name" type="text" class="validate" placeholder="Last"/>
                           <label for="last_name">Last Name</label>
                       </div> 
                     </div>                     
                     <div className='row'>
                       <div className='input-field col s12'>
-                          <input className='validate' type='email' name='user_name' id='user_name' placeholder="Enter your Username"/>
+                          <input name="username" className='validate' type='email' name='user_name' id='user_name' placeholder="Enter your Username"/>
                             <label for="user_name">Username</label>
                       </div>
                     </div>                  
                     <div className='row'>
                       <div className='input-field col s12'>
-                        <input className='validate' type='email' name='email' id='email' placeholder="Enter your email" />
+                        <input name="email" className='validate' type='email' name='email' id='email' placeholder="Enter your email" />
                           <label for="email">Email</label>
                       </div>
                       <div className='row'>
@@ -77,7 +77,7 @@ class Signup extends Component {
                   </div>
                     <div className='row'>
                       <div className='input-field col s12'>
-                        <input className='validate' type='password' name='password' id='password' placeholder="Create your password" />
+                        <input name="password" className='validate' type='password' name='password' id='password' placeholder="Create your password" />
                           <label for="password">Password</label>
                       </div>
                     </div>
