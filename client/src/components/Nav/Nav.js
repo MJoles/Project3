@@ -12,15 +12,9 @@ const Nav = props => (
             <div class="text">
                 {props.text}
             </div>
-<<<<<<< HEAD
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="badges.html">Find Work</a></li>
-                <li><a href="/newjob">Post Work</a></li>
-=======
             <ul id="nav-mobile" className="right hide-on-med-and-down ">
                 <li><a className="indigo-text" href="/search">Find Work</a></li>
                 <li><a className="indigo-text" href="/newjob">Post Work!</a></li> 
->>>>>>> 4cf96dedf1654dd68f629528d679019b60a739c9
             </ul>
         </div>
     </nav>
