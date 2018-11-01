@@ -2,16 +2,15 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const offerSchema = new Schema({
-  jobType: { type: String, required: true },
-  jobDesription: { type: String, required: true },
  // fee: { type: Number, required: true },
  // location: { type: String, required: true },
-  "jobs": {
-  "yardwork": true,
-  "carpentry": true,
-  "plumbing": true,
-  "electrician": true
-},
+  yardwork: { type: Boolean },
+  carpentry: { type: Boolean },
+  plumbing: { type: Boolean },
+  electrician: { type: Boolean },
+  jobDetails: { type: String, required: true },
+  city: { type: String, required: true },
+  state: { type: String, required: true },
   date: { type: Date, default: Date.now }
 });
 

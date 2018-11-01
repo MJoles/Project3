@@ -30,7 +30,7 @@ class Post extends Component {
                         <div className='row'>
                           <label> 
                             <input type="checkbox" />
-                              <span>Caprtpentry</span>                  
+                              <span>Carpentry</span>                  
                           </label>   
                         </div>
                         <div className='row'>

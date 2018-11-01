@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 const PORT = process.env.PORT || 3001;
 const app = express();
 
-const User = require("./register.js");
+const User = require("./models/register");
 
 // Configure middleware
 
