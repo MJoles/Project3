@@ -15,7 +15,7 @@ class Login extends Component {
             </Jumbotron>
            
             <center>
-              <h5 className="indigo-text">Welcome back, please login into your account</h5>
+              <h5 className="black-text">Welcome back, please login into your account</h5>
 
                 <div className="container">
                   <div className="z-depth-1 grey lighten-4 row" >

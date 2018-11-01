@@ -14,21 +14,28 @@ class Home extends Component {
               <h1>UBERHELP!</h1>
             </Jumbotron>
         </Col>
-          <div>
-            <button type="button" class="btn btn-primary btn-lg btn-block">Job Listings
-            <p id="buttontext">All job postings</p>
-            </button>
+        <br/>
+
+          <div className='row'>
+            <button type="button" class="col s12 btn btn-large waves-effect black ">Job Listings
+              <label className="indigo-text">(All job postings)</label> 
+            </button>              
+          </div>
             <br/>
 
-            <button type="button" class="btn btn-primary btn-lg btn-block">Need Help
-            <p id="buttontext">Search job postings</p>
-            </button>
-            <br/>
-
-            <button type="button" class="btn btn-secondary btn-lg btn-block">Offer Help
-            <p id="buttontext">Post a job</p>
+          <div className='row'> 
+            <button type="button" class="col s12 btn btn-large waves-effect black ">Need Help
+              <label className="indigo-text">(Search job postings)</label> 
             </button>
           </div>
+            <br/>
+
+          <div className='row'> 
+            <button type="sumbit" className="col s12 btn btn-large waves-effect black">Offer Help
+              <label className="indigo-text">(Post a job)</label> 
+            </button>
+          </div>
+
       </div>
   )
   }
