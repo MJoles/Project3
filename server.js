@@ -26,8 +26,6 @@ app.post("/submit", function(req, res) {
   // Create a new user using req.body
 
   const user = new User(req.body);
-  user.setFullName();
-  user.lastUpdatedDate();
 
   User.create(user)
     .then(function(dbUser) {
