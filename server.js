@@ -8,13 +8,6 @@ const app = express();
 
 const User = require("./register.js");
 
-const app = express();
-
-//////////// from 18-mongo exercise 17 server.js
-
-// Initialize Express
-const app = express();
-
 // Configure middleware
 
 // Use morgan logger for logging requests
@@ -27,7 +20,6 @@ app.use(express.static("public"));
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/joblist");
 
-// Routes
 
 // Route to post our form submission to mongoDB via mongoose
 app.post("/submit", function(req, res) {
@@ -48,10 +40,7 @@ app.post("/submit", function(req, res) {
     });
 });
 
-
-//---//////// Ends mongo exercise (Removed the server)
-
-
+//--//////// Ends mongo exercise (Removed the server)
 
 // Define middleware here
 app.use(bodyParser.urlencoded({ extended: true }));
