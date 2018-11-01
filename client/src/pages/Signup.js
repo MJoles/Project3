@@ -20,7 +20,7 @@ class Signup extends Component {
 
               <div className="container">
                 <div className="z-depth-1 grey lighten-4 row" >
-                  <form className="col s12" method="post">
+                  <form className="col s12" method="post" action="/submit">
 
                     <div className='row'>
                       <div class="input-field col s6">
@@ -53,13 +53,13 @@ class Signup extends Component {
                       <div className='row'>
                         <label> 
                           <input type="checkbox" />
-                            <span>Caprtpentry</span>                  
+                            <span>Carpentry</span>                  
                         </label>   
                       </div>
                       <div className='row'>
                         <label> 
                           <input type="checkbox" />
-                            <span>Yardwork</span>                  
+                            <span>Yard work</span>                  
                         </label>   
                       </div>
                       <div className='row'>
