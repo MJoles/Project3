@@ -1,10 +1,42 @@
 import React, { Component } from "react";
+import axios from "axios"
 import Jumbotron from "../components/Jumbotron";
 import { Col, Row} from "../components/Grid";
 import Nav from "../components/Nav";
+import User from "../../../models/register"
+import API from "../util/API"
+
 import "./Pages.css"
 
 class Signup extends Component {
+
+  handleClick =(event) =>{
+    event.preventDefault()
+
+    axios.post('/submit', function(req,res) {
+      // Create a new user using req.body
+    const user = new User(req.body);
+  
+    User.create(user)
+      .then(function(dbUser) {
+        // If saved successfully, send the the new User document to the client
+        res.json(dbUser);
+      })
+      .catch(function(err) {
+        // If an error occurs, send the error to the client
+        res.json(err);
+      });
+  })
+  // API.saveBook()
+
+  // User.create(user)
+  // .then()
+  // .catch(err => console.log(err));
+  
+  //   console.log("click")
+  }
+
+
 
   render() {
     return (
@@ -20,7 +52,7 @@ class Signup extends Component {
 
               <div className="container">
                 <div className="z-depth-1 grey lighten-4 row" >
-                  <form className="col s12" method="post" action="/submit">
+                  <form className="col s12" method="post" action="http://localhost:3001/submit">
 
                     <div className='row'>
                       <div class="input-field col s6">
@@ -34,7 +66,7 @@ class Signup extends Component {
                     </div>                     
                     <div className='row'>
                       <div className='input-field col s12'>
-                          <input name="username" className='validate' type='email' name='user_name' id='user_name' placeholder="Enter your Username"/>
+                          <input name="username" className='validate' type='text' name='user_name' id='user_name' placeholder="Enter your Username"/>
                             <label for="user_name">Username</label>
                       </div>
                     </div>                  
@@ -82,7 +114,7 @@ class Signup extends Component {
                       </div>
                     </div>
                     <div className='row'>
-                      <button type='submit' name='btn_login' className='col s12 btn btn-large waves-effect indigo'>Login</button>
+                      <button onClick={this.handleClick} type='submit' name='btn_login' className='col s12 btn btn-large waves-effect indigo'>Login</button>
                     </div>
                   </form>
                 </div>
