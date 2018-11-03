@@ -5,7 +5,60 @@ import Nav from "../components/Nav";
 import "./Pages.css"
 
 class Post extends Component {
+  state = {
+    yardwork: false,
+    carpentry: false,
+    plumbing: false,
+    electrician: false,
+    jobDetails: "",
+    city: "",
+    state: "",
+  };
 
+  handleFormSubmit = event => {
+    event.preventDefault();
+
+    if (this.refs.carpentry.checked == true) {
+     this.setState({ carpentry: true })
+     }
+    if (this.refs.yardwork.checked == true) {
+     this.setState({ yardwork: true })
+    }
+    if (this.refs.plumbing.checked == true) {
+     this.setState({ plumbing: true })
+    }
+    if (this.refs.electrician.checked == true) {
+     this.setState({ electrician: true })
+      }
+    
+    
+    // continue for all other refs
+     this.setState({
+         jobDetails: details,
+         city: city,
+         state: state
+      })
+
+    //var jobData = this.state
+    // API.saveJobs(jobData)
+  }
+  // handleFormSubmit = event => {
+  //   event.preventDefault();
+  //   if (this.state.yardwork && this.state.carpentry && this.state.plumbing && this.state.electrician) {
+  //     axios.get("/jobs")
+  //     .then({
+  //       yardwork: this.state.yardwork,
+  //       carpentry: this.state.carpentry,
+  //       plumbing: this.state.plumbing,
+  //       electrician: this.state.electrician,
+  //       jobDetails: this.state.jobDetails,
+  //       city: this.state.city,
+  //       state: this.state.state
+  //     })
+  //       .then(res => this.loadJobs())
+  //       .catch(err => console.log(err));
+  //   }
+  // };
   render() {
     return (
      <div>
@@ -31,25 +84,25 @@ class Post extends Component {
 
                         <div className='row'>
                           <label> 
-                            <input type="checkbox" />
+                            <input type="checkbox" ref="carpentry" />
                               <span>Carpentry</span>                  
                           </label>   
                         </div>
                         <div className='row'>
                           <label> 
-                            <input type="checkbox" />
+                            <input type="checkbox" ref="yardwork" />
                               <span>Yardwork</span>                  
                           </label>   
                         </div>
                         <div className='row'>
                           <label> 
-                            <input type="checkbox" />
+                            <input type="checkbox" ref="electrician" />
                               <span>Electrician</span>                  
                           </label>   
                         </div>
                         <div className='row'>
                           <label>
-                            <input type="checkbox" />
+                            <input type="checkbox" ref="plumbing" />
                               <span>Plumbing</span>
                           </label>                                           
                         </div>
@@ -61,11 +114,11 @@ class Post extends Component {
                         </div>
                         <div className='row'>
                       <div class="input-field col s6">
-                        <input id="city" type="text" class="validate" placeholder="City"/>
+                        <input id="city" type="text" class="validate" name='city' placeholder="City"/>
                           <label for="first_name">City</label>
                       </div>
                       <div class="input-field col s6">
-                        <input id="state" type="text" class="validate" placeholder="State"/>
+                        <input id="state" type="text" class="validate" name='state' placeholder="State"/>
                           <label for="last_name">State</label>
                       </div> 
                     </div> 
