@@ -11,7 +11,6 @@ const UserSchema = new Schema({
     trim: true,
     required: "First Name is Required"
   },
-  
   lastName: {
     type: String,
     trim: true,

@@ -3,30 +3,18 @@ import axios from "axios"
 import Jumbotron from "../components/Jumbotron";
 import { Col, Row} from "../components/Grid";
 import Nav from "../components/Nav";
-import User from "../../../models/register"
-import API from "../util/API"
-
 import "./Pages.css"
 
 class Signup extends Component {
 
-  handleClick =(event) =>{
+  handleClick = (event) => {
     event.preventDefault()
 
-    axios.post('/submit', function(req,res) {
+    axios.post('/users', function(req,res) {
       // Create a new user using req.body
-    const user = new User(req.body);
-  
-    User.create(user)
-      .then(function(dbUser) {
-        // If saved successfully, send the the new User document to the client
-        res.json(dbUser);
-      })
-      .catch(function(err) {
-        // If an error occurs, send the error to the client
-        res.json(err);
-      });
-  })
+    
+
+    })
   // API.saveBook()
 
   // User.create(user)
