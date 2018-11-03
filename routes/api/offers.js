@@ -2,9 +2,9 @@ const router = require("express").Router();
 const helpController = require("../../controllers/helpController");
 
 // Matches with "/api/offers"
-router.route("/needhelp")
+router.route("/sumbit")
   .get(helpController.findAll)
-  .post(helpController.create);
+  // .post(helpController.create);
 
 // // Matches with "/api/books/:id"
 // router
