@@ -1,8 +1,11 @@
-import React, { Component } from "react";
+import React, { Component, Redirect } from "react";
 import axios from "axios"
 import Jumbotron from "../components/Jumbotron";
-import { Col} from "../components/Grid";
+import {Col, Row} from "../components/Grid";
 import Nav from "../components/Nav";
+import Home from "../pages/Home";
+
+
 // import User from "../models/register"
 // import API from "../util/API"
 
@@ -39,6 +42,10 @@ class Signup extends Component {
     })
     .then((res) => {
       console.log(res)
+      if(res.status === 200){
+        // console.log("GREAT")
+    <Redirect to="/home" />
+      }
     })
   }
   
@@ -58,7 +65,8 @@ class Signup extends Component {
                 <div className="z-depth-1 grey lighten-4 row" >
                   <form className="col s12" method="post" action="http://localhost:3001/submit">
 
-                    <div className='row'>
+                    <div className='row'> 
+                    
                       <div className="input-field col s6">
                         <input value={this.state.firstName} onChange={this.handleInputChange} name="firstName" id="first_name" type="text" className="validate" placeholder="First"/>
                           <label htmlFor="first_name">First Name</label>
