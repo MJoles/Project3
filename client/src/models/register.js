@@ -11,7 +11,6 @@ const UserSchema = new Schema({
     trim: true,
     required: "First Name is Required"
   },
-  
   lastName: {
     type: String,
     trim: true,
@@ -20,7 +19,6 @@ const UserSchema = new Schema({
   username: {
     type: String,
     trim: true,
-    required: "Username is Required"
   },
   password: {
     type: String,
