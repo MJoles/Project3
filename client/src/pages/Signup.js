@@ -54,7 +54,7 @@ class Signup extends Component {
                     </div>                     
                     <div className='row'>
                       <div className='input-field col s12'>
-                          <input name="username" className='validate' type='text' name='user_name' id='user_name' placeholder="Enter your Username"/>
+                          <input name="userName" className='validate' type='text' name='user_name' id='user_name' placeholder="Enter your Username"/>
                             <label for="user_name">Username</label>
                       </div>
                     </div>                  
