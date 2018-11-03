@@ -3,8 +3,8 @@ import axios from "axios"
 import Jumbotron from "../components/Jumbotron";
 import { Col, Row} from "../components/Grid";
 import Nav from "../components/Nav";
-import User from "../../../models/register"
-import API from "../util/API"
+import User from "../models/register"
+// import API from "../util/API"
 
 import "./Pages.css"
 
