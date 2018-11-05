@@ -15,6 +15,6 @@ export default {
   },
   // Saves a job to the database
   saveJobs: function(jobData) {
-    return axios.post("/jobs", jobData);
+    return axios.post("/newjob", jobData);
   }
 };

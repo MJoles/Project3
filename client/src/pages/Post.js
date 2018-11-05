@@ -11,17 +11,20 @@ class Post extends Component {
     carpentry: false,
     plumbing: false,
     electrician: false,
-    jobDetails: "",
+    details: "",
     city: "",
     state: "",
   };
 
   handleInputChange = event => {
-    const { name, value } = event.target;
+    const target = event.target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    const name = target.name;
+
     this.setState({
       [name]: value
     });
-  };
+  }
 
   handleFormSubmit = event => {
     event.preventDefault();
@@ -92,41 +95,41 @@ class Post extends Component {
 
                         <div className='row'>
                           <label> 
-                            <input type="checkbox" ref="carpentry" onChange={this.handleInputChange}/>
+                            <input type="checkbox" ref="carpentry" name="carpentry" checked={this.state.carpentry} onChange={this.handleInputChange}/>
                               <span>Carpentry</span>                  
                           </label>   
                         </div>
                         <div className='row'>
                           <label> 
-                            <input type="checkbox" ref="yardwork" onChange={this.handleInputChange}/>
+                            <input type="checkbox" ref="yardwork" name="yardwork" checked={this.state.yardwork} onChange={this.handleInputChange}/>
                               <span>Yardwork</span>                  
                           </label>   
                         </div>
                         <div className='row'>
                           <label> 
-                            <input type="checkbox" ref="electrician" onChange={this.handleInputChange}/>
+                            <input type="checkbox" ref="electrician" name="electrician" checked={this.state.electrician} onChange={this.handleInputChange}/>
                               <span>Electrician</span>                  
                           </label>   
                         </div>
                         <div className='row'>
                           <label>
-                            <input type="checkbox" ref="plumbing" onChange={this.handleInputChange}/>
+                            <input type="checkbox" ref="plumbing" name="plumbing" checked={this.state.plumbing} onChange={this.handleInputChange}/>
                               <span>Plumbing</span>
                           </label>                                           
                         </div>
                         <div className='row'>
                           <div className='input-field col s12'>
-                            <textarea className='validate' type='text' value={this.state.details} name='details' id='details' placeholder="prices, notes, etc."/>
+                            <textarea className='validate' type='text'  value={this.state.details} onChange={this.handleInputChange} name='details' id='details' placeholder="prices, notes, etc."/>
                               <label for="details">Job Details</label>
                           </div>
                         </div>
                         <div className='row'>
                       <div class="input-field col s6">
-                        <input id="city" type="text" class="validate" value={this.state.city} name='city' placeholder="City"/>
+                        <input id="city" type="text" class="validate" value={this.state.city} onChange={this.handleInputChange} name='city' placeholder="City"/>
                           <label for="first_name">City</label>
                       </div>
                       <div class="input-field col s6">
-                        <input id="state" type="text" class="validate" value={this.state.state} name='state' placeholder="State"/>
+                        <input id="state" type="text" class="validate" value={this.state.state} onChange={this.handleInputChange} name='state' placeholder="State"/>
                           <label for="last_name">State</label>
                       </div> 
                     </div> 
@@ -137,7 +140,7 @@ class Post extends Component {
                           </div>
                         </div>
                         <div className='row'>
-                          <button type='submit' name='btn_login' className='col s12 btn btn-large waves-effect indigo' onclick={this.handleFormSubmit}>Post</button>
+                          <button type='submit' name='btn_login' className='col s12 btn btn-large waves-effect indigo' onClick={this.handleFormSubmit}>Post</button>
                         </div>
                   </form>
                 </div>
