@@ -6,7 +6,7 @@ export default {
     return axios.get("/jobs");
   },
   // Gets the jobs with the given id
-  getJobs: function(id) {
+  getJob: function(id) {
     return axios.get("/jobs/" + id);
   },
   // Deletes the jobs with the given id
@@ -15,6 +15,6 @@ export default {
   },
   // Saves a job to the database
   saveJobs: function(jobData) {
-    return axios.post("/newjob", jobData);
+    return axios.post("/jobs", jobData);
   }
 };

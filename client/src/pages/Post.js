@@ -29,16 +29,16 @@ class Post extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
 
-    if (this.refs.carpentry.checked == true) {
+    if (this.refs.carpentry.checked === true) {
      this.setState({ carpentry: true })
     }
-    if (this.refs.yardwork.checked == true) {
+    if (this.refs.yardwork.checked === true) {
      this.setState({ yardwork: true })
     }
-    if (this.refs.plumbing.checked == true) {
+    if (this.refs.plumbing.checked === true) {
      this.setState({ plumbing: true })
     }
-    if (this.refs.electrician.checked == true) {
+    if (this.refs.electrician.checked === true) {
      this.setState({ electrician: true })
     }
   
@@ -52,24 +52,26 @@ class Post extends Component {
     var jobData = this.state
     console.log(this.state)
     API.saveJobs(jobData)
-  }
+  
   // handleFormSubmit = event => {
   //   event.preventDefault();
   //   if (this.state.yardwork && this.state.carpentry && this.state.plumbing && this.state.electrician) {
   //     axios.get("/jobs")
-  //     .then({
-  //       yardwork: this.state.yardwork,
-  //       carpentry: this.state.carpentry,
-  //       plumbing: this.state.plumbing,
-  //       electrician: this.state.electrician,
-  //       jobDetails: this.state.jobDetails,
-  //       city: this.state.city,
-  //       state: this.state.state
-  //     })
-  //       .then(res => this.loadJobs())
-  //       .catch(err => console.log(err));
-  //   }
-  // };
+      // .then({
+      //   yardwork: this.state.yardwork,
+      //   carpentry: this.state.carpentry,
+      //   plumbing: this.state.plumbing,
+      //   electrician: this.state.electrician,
+      //   jobDetails: this.state.details,
+      //   city: this.state.city,
+      //   state: this.state.state
+      // })
+        .then(res => 
+          this.handleFormSubmit()
+        )
+        .catch(err => console.log(err.res))
+    }
+  
   render() {
     return (
      <div>

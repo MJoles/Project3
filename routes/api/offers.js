@@ -1,10 +1,10 @@
 const router = require("express").Router();
-const helpController = require("../../controllers/helpController");
+const jobController = require("../../client/controllers/jobController");
 
 // Matches with "/api/offers"
-router.route("/sumbit")
-  .get(helpController.findAll)
-  // .post(helpController.create);
+router.route("/jobs")
+  .get(jobController.findAll)
+  .post(jobController.create);
 
 // // Matches with "/api/books/:id"
 // router

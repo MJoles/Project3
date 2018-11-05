@@ -2,7 +2,7 @@ const router = require("express").Router();
 const jobController = require("../controllers/jobController")
 
 
-router.route("/newjob")
+router.route("/jobs")
     .post(jobController.create)
     .get(jobController.findAll);
 
