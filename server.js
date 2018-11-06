@@ -7,8 +7,6 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 const routes = require("./client/routes/index");
 
-//const User = require("./client/src/models/register");
-
 // Configure middleware
 
 // Use morgan logger for logging requests
@@ -29,7 +27,7 @@ if (process.env.NODE_ENV === "production") {
 
 const apiRoutes = require('./client/routes');
 
-app.use('/', apiRoutes);
+//app.use('/', apiRoutes);
 //--//////// Ends mongo exercise (Removed the server)
 
 app.use(routes);
