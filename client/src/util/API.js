@@ -3,7 +3,7 @@ import axios from "axios";
 export default {
   // Gets all jobs
   getJobs: function() {
-    return axios.get("/jobs");
+    return axios.get("/view");
   },
   // Gets the jobs with the given id
   getJob: function(id) {

@@ -28,46 +28,14 @@ class Post extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-
-    if (this.refs.carpentry.checked === true) {
-     this.setState({ carpentry: true })
-    }
-    if (this.refs.yardwork.checked === true) {
-     this.setState({ yardwork: true })
-    }
-    if (this.refs.plumbing.checked === true) {
-     this.setState({ plumbing: true })
-    }
-    if (this.refs.electrician.checked === true) {
-     this.setState({ electrician: true })
-    }
-  
-    // if (this.setState({
-    //   jobDetails: details,
-    //   city: city,
-    //   state: state
-    //   }))
-         
-    
     var jobData = this.state
     console.log(jobData)
     API.saveJobs(jobData)
-  
-  // handleFormSubmit = event => {
-  //   event.preventDefault();
-  //   if (this.state.yardwork && this.state.carpentry && this.state.plumbing && this.state.electrician) {
-  //     axios.get("/jobs")
-      // .then({
-      //   yardwork: this.state.yardwork,
-      //   carpentry: this.state.carpentry,
-      //   plumbing: this.state.plumbing,
-      //   electrician: this.state.electrician,
-      //   jobDetails: this.state.details,
-      //   city: this.state.city,
-      //   state: this.state.state
-      // })
         .then(res => {
+          // res.redirect
           console.log(res)
+          console.log(this.props.history.push("/view"))
+          this.props.history.push("/view")
         })
         .catch(err => console.log(err))
     }

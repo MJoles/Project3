@@ -3,8 +3,19 @@ import Jumbotron from "../components/Jumbotron";
 import { Col, Row} from "../components/Grid";
 import Nav from "../components/Nav";
 import "./Pages.css"
+import API from "./../util/API";
 
 class View extends Component {
+
+  jobImport = event => {
+    event.preventDefault()
+    var allJobs = this.state
+    API.getJobs(allJobs)
+      .then(res => {
+        console.log(res)
+      })
+      .catch(err => console.log(err))
+  }
 
   render() {
     return (

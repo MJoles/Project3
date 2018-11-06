@@ -25,9 +25,9 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-const apiRoutes = require('./routes/api');
+//const apiRoutes = require('./routes/api');
 
-app.use('/', apiRoutes);
+//app.use('/', apiRoutes);
 //--//////// Ends mongo exercise (Removed the server)
 
 app.use(routes);
