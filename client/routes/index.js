@@ -6,4 +6,4 @@ const path = require("path");
 router.use(jobRoutes);
 router.use(userRoutes);
 
-module.exports = router;
+module.exports = router; 

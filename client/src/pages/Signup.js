@@ -1,4 +1,5 @@
-import React, { Component, Redirect } from "react";
+import React, { Component } from "react";
+import {Redirect} from 'react-router';
 import axios from "axios"
 import Jumbotron from "../components/Jumbotron";
 import {Col, Row} from "../components/Grid";
@@ -19,7 +20,8 @@ class Signup extends Component {
     userName:"",
     password:"",
     email:"",
-    userCreated:""
+    userCreated:"",
+    redirect: false
   }
 
   handleInputChange = event => {
@@ -33,7 +35,7 @@ class Signup extends Component {
   handleClick = (event) => {
     event.preventDefault()
 
-    axios.post('/users/create', { 
+    axios.post('/users', { 
         firstName: this.state.firstName,
         lastName: this.state.lastName,
         userName: this.state.userName,
@@ -44,15 +46,19 @@ class Signup extends Component {
       console.log(res)
       if(res.status === 200){
         // console.log("GREAT")
-    <Redirect to="/home" />
+        this.setState({ redirect: true })
       }
     })
   }
   
   render() {
+    const { redirect } = this.state;
+    if (redirect) {
+      return <Redirect to='/home' username= { this.state.userName }/>
+    }
+
     return (
      <div>
-       <Nav />
           <Col size="md-12">
             <Jumbotron>
                 <h1>UBERHELP!</h1>
@@ -87,38 +93,7 @@ class Signup extends Component {
                         <input value={this.state.email} onChange={this.handleInputChange} name="email" className='validate' type='email' name='email' id='email' placeholder="Enter your email" />
                           <label htmlFor="email">Email</label>
                       </div>
-                      <div className='row'>
-                        <div className='input-field col s12'>
-                          <span className="input-group-text"> Select your Job(s)</span>
-                        </div>     
-                          <label>Check all that apply</label>
-
-                      </div>
-                      <div className='row'>
-                        <label> 
-                          <input type="checkbox" />
-                            <span>Carpentry</span>                  
-                        </label>   
-                      </div>
-                      <div className='row'>
-                        <label> 
-                          <input type="checkbox" />
-                            <span>Yard work</span>                  
-                        </label>   
-                      </div>
-                      <div className='row'>
-                        <label> 
-                          <input type="checkbox" />
-                            <span>Electrician</span>                  
-                        </label>   
-                      </div>
-                      <div className='row'>
-                        <label>
-                          <input type="checkbox" />
-                            <span>Plumbing</span> 
-                         </label>                                             
-                      </div>  
-                  </div>
+                    </div>
                     <div className='row'>
                       <div className='input-field col s12'>
                         <input value={this.state.password} onChange={this.handleInputChange} name="password" className='validate' type='password' name='password' id='password' placeholder="Create your password" />

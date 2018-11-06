@@ -8,7 +8,7 @@ class Home extends Component {
   render(){
     return(
       <div>
-        <Nav text={"USERNAME WILL GO HERE"} />
+        <Nav text={this.props.username} text={this.props.email} />
         <Col size="md-12">
             <Jumbotron>
               <h1>UBERHELP!</h1>
