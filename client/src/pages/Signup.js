@@ -3,12 +3,9 @@ import axios from "axios"
 import Jumbotron from "../components/Jumbotron";
 import {Col, Row} from "../components/Grid";
 import Nav from "../components/Nav";
-<<<<<<< HEAD
-=======
 import Home from "../pages/Home";
 
 
->>>>>>> f3f33ee17da808d25ba41d6c29dc0f6b3a69657f
 // import User from "../models/register"
 // import API from "../util/API"
 
