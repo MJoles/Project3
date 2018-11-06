@@ -5,11 +5,11 @@ import logo from '../../images/LogoMakr_4Tq9vR.png'
 
 const Nav = props => (
     <nav>
-        <div class="nav-wrapper">
-            <a href="/home" class="brand-logo">
+        <div className="nav-wrapper">
+            <a href="/home" className="brand-logo">
                 <img id="image" src={logo}/>
             </a>
-            <div class="text">
+            <div className="text">
                 {props.text}
             </div>
             <ul id="nav-mobile" className="right hide-on-med-and-down ">
