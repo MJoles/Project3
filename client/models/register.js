@@ -16,7 +16,7 @@ const UserSchema = new Schema({
     trim: true,
     required: "Last Name is Required"
   },
-  userName: {
+  username: {
     type: String,
     trim: true,
   },
@@ -33,7 +33,7 @@ const UserSchema = new Schema({
   },
   email: {
     type: String,
-    // unique: true,
+    unique: true,
     match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
   },
   userCreated: {

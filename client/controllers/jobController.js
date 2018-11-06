@@ -1,6 +1,6 @@
 const db = require("../models");
 
-// Defining methods for the helpController
+// Defining methods for the jobController
 module.exports = {
   findAll: function(req, res) {
     db.Offer
