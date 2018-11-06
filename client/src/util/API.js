@@ -6,7 +6,7 @@ export default {
     return axios.get("/jobs");
   },
   // Gets the jobs with the given id
-  getJobs: function(id) {
+  getJob: function(id) {
     return axios.get("/jobs/" + id);
   },
   // Deletes the jobs with the given id
