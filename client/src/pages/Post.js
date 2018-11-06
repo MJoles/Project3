@@ -11,7 +11,7 @@ class Post extends Component {
     carpentry: false,
     plumbing: false,
     electrician: false,
-    details: "",
+    jobDetails: "",
     city: "",
     state: "",
   };
@@ -50,7 +50,7 @@ class Post extends Component {
          
     
     var jobData = this.state
-    console.log(this.state)
+    console.log(jobData)
     API.saveJobs(jobData)
   
   // handleFormSubmit = event => {
@@ -66,10 +66,10 @@ class Post extends Component {
       //   city: this.state.city,
       //   state: this.state.state
       // })
-        .then(res => 
-          this.handleFormSubmit()
-        )
-        .catch(err => console.log(err.res))
+        .then(res => {
+          console.log(res)
+        })
+        .catch(err => console.log(err))
     }
   
   render() {
@@ -121,7 +121,7 @@ class Post extends Component {
                         </div>
                         <div className='row'>
                           <div className='input-field col s12'>
-                            <textarea className='validate' type='text'  value={this.state.details} onChange={this.handleInputChange} name='details' id='details' placeholder="prices, notes, etc."/>
+                            <textarea className='validate' type='text'  value={this.state.jobDetails} onChange={this.handleInputChange} name='jobDetails' id='details' placeholder="prices, notes, etc."/>
                               <label for="details">Job Details</label>
                           </div>
                         </div>

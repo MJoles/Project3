@@ -5,20 +5,20 @@ const logger = require("morgan");
 const mongoose = require("mongoose");
 const PORT = process.env.PORT || 3001;
 const app = express();
-//const routes = require("./routes");
+const routes = require("./client/routes/index");
 
-const User = require("./client/src/models/register");
+//const User = require("./client/src/models/register");
 
 // Configure middleware
 
 // Use morgan logger for logging requests
 app.use(logger("dev"));
-//app.use(routes);
+
 // Use body-parser for handling form submissions
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use()
+//app.use()
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/joblist");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/joblist", { useNewUrlParser: true });
 
 // Define middleware here
 app.use(bodyParser.json());
@@ -28,6 +28,7 @@ if (process.env.NODE_ENV === "production") {
 }
 //--//////// Ends mongo exercise (Removed the server)
 
+app.use(routes);
 // Send every other request to the React app
 // Define any API routes before this runs
 app.get("*", (req, res) => {

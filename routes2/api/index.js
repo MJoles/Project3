@@ -1,7 +1,7 @@
 const router = require("express").Router();
-const offerRoutes = require("./offers");
+const offerRoutes = require("./../api/offers");
 
 // Offer Help routes
-router.use("/", offerRoutes);
+router.use("/jobs", offerRoutes);
 
 module.exports = router;
