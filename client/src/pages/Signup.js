@@ -1,31 +1,47 @@
 import React, { Component } from "react";
 import axios from "axios"
 import Jumbotron from "../components/Jumbotron";
-import { Col, Row} from "../components/Grid";
+import { Col} from "../components/Grid";
 import Nav from "../components/Nav";
+// import User from "../models/register"
+// import API from "../util/API"
+
 import "./Pages.css"
 
 class Signup extends Component {
 
+  state = {
+    firstName: "",
+    lastName:"",
+    userName:"",
+    password:"",
+    email:"",
+    userCreated:""
+  }
+
+  handleInputChange = event => {
+
+    const { name, value } = event.target;
+      this.setState({
+        [name]: value 
+      })
+  };
+
   handleClick = (event) => {
     event.preventDefault()
 
-    axios.post('/users', function(req,res) {
-      // Create a new user using req.body
-    
-
+    axios.post('/users/create', { 
+        firstName: this.state.firstName,
+        lastName: this.state.lastName,
+        userName: this.state.userName,
+        email: this.state.email,
+        password: this.state.password,
     })
-  // API.saveBook()
-
-  // User.create(user)
-  // .then()
-  // .catch(err => console.log(err));
-  
-  //   console.log("click")
+    .then((res) => {
+      console.log(res)
+    })
   }
-
-
-
+  
   render() {
     return (
      <div>
@@ -43,29 +59,29 @@ class Signup extends Component {
                   <form className="col s12" method="post" action="http://localhost:3001/submit">
 
                     <div className='row'>
-                      <div class="input-field col s6">
-                        <input name="firstName" id="first_name" type="text" class="validate" placeholder="First"/>
-                          <label for="first_name">First Name</label>
+                      <div className="input-field col s6">
+                        <input value={this.state.firstName} onChange={this.handleInputChange} name="firstName" id="first_name" type="text" className="validate" placeholder="First"/>
+                          <label htmlFor="first_name">First Name</label>
                       </div>
-                      <div class="input-field col s6">
-                        <input name="lastName" id="last_name" type="text" class="validate" placeholder="Last"/>
-                          <label for="last_name">Last Name</label>
+                      <div className="input-field col s6">
+                        <input value={this.state.lastName} onChange={this.handleInputChange} name="lastName" id="last_name" type="text" className="validate" placeholder="Last"/>
+                          <label htmlFor="last_name">Last Name</label>
                       </div> 
                     </div>                     
                     <div className='row'>
                       <div className='input-field col s12'>
-                          <input name="userName" className='validate' type='text' name='user_name' id='user_name' placeholder="Enter your Username"/>
-                            <label for="user_name">Username</label>
+                          <input value={this.state.userName} onChange={this.handleInputChange} name="userName" className='validate' type='text' id='user_name' placeholder="Enter your Username"/>
+                            <label htmlFor="user_name">Username</label>
                       </div>
                     </div>                  
                     <div className='row'>
                       <div className='input-field col s12'>
-                        <input name="email" className='validate' type='email' name='email' id='email' placeholder="Enter your email" />
-                          <label for="email">Email</label>
+                        <input value={this.state.email} onChange={this.handleInputChange} name="email" className='validate' type='email' name='email' id='email' placeholder="Enter your email" />
+                          <label htmlFor="email">Email</label>
                       </div>
                       <div className='row'>
                         <div className='input-field col s12'>
-                          <span class="input-group-text"> Select your Job(s)</span>
+                          <span className="input-group-text"> Select your Job(s)</span>
                         </div>     
                           <label>Check all that apply</label>
 
@@ -97,8 +113,8 @@ class Signup extends Component {
                   </div>
                     <div className='row'>
                       <div className='input-field col s12'>
-                        <input name="password" className='validate' type='password' name='password' id='password' placeholder="Create your password" />
-                          <label for="password">Password</label>
+                        <input value={this.state.password} onChange={this.handleInputChange} name="password" className='validate' type='password' name='password' id='password' placeholder="Create your password" />
+                          <label htmlFor="password">Password</label>
                       </div>
                     </div>
                     <div className='row'>
