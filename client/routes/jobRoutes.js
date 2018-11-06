@@ -7,4 +7,7 @@ router.route("/jobs")
     .get(jobController.findAll);
 
 
+router.route("/view")
+    .get(jobController.findAll);
+    
 module.exports = router;
