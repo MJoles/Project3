@@ -35,10 +35,11 @@ class Search extends Component {
     if(this.state.yardwork === true){
 
       axios.get("/findYardworkers",)
-      .then(res => {
-    
-      })
-      
+        .then(res => {
+          this.setState({
+          jobs: res.data
+        })
+      })  
     }
      if(this.state.carpentry === true){   
        axios.get("/findCarpenters",)
@@ -48,18 +49,21 @@ class Search extends Component {
            jobs: res.data
          })
        })
-
     }
     if(this.state.plumbing === true ){
       axios.get("/findPlumbers",)
       .then(res => {
-        
+        this.setState({
+          jobs: res.data
+        })      
       })
     }
     if(this.state.electrician === true){
       axios.get("/findElectricians",)
       .then(res => {
-        
+        this.setState({
+          jobs: res.data
+        })    
       })
     }
   }  
@@ -80,9 +84,6 @@ class Search extends Component {
     }
     return jobTitles;
   }
-
-
-
 
   render() {
     return (
