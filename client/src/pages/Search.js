@@ -149,7 +149,6 @@ class Search extends Component {
                   <strong><h6 > UBERHELP <i class="material-icons">home</i></h6></strong>
                    <strong>Skills:</strong> {this.jobType(job)}
 
-                    {/* Skills: {job.} */}
                     <br></br>
                     <strong>Job Details:</strong> {job.jobDetails}
                     <br></br>
