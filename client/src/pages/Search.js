@@ -31,22 +31,55 @@ class Search extends Component {
       jobs: []
     })
     event.preventDefault();
-    axios.get("/findCarpenters", )
 
     if(this.state.yardwork === true){
-      API.getYardworkers()
+
+      axios.get("/findYardworkers",)
+      .then(res => {
+    
+      })
       
     }
-     if(this.state.carpentry === true){
-      API.getCarpenters()
+     if(this.state.carpentry === true){   
+       axios.get("/findCarpenters",)
+       .then( res => {
+         console.log(res)
+         this.setState({
+           jobs: res.data
+         })
+       })
+
     }
     if(this.state.plumbing === true ){
-      API.getPlumbers
+      axios.get("/findPlumbers",)
+      .then(res => {
+        
+      })
     }
     if(this.state.electrician === true){
-      API.getElectricians
+      axios.get("/findElectricians",)
+      .then(res => {
+        
+      })
     }
   }  
+
+  jobType(job) {
+    var jobTitles = ""
+    if(job.carpentry) {
+      jobTitles += "Carpentry  "
+    }
+    if(job.plumbing) {
+      jobTitles += "Plumbing  "
+    }
+    if(job.electrician) {
+      jobTitles += "Electrician  "
+    }
+    if(job.yardwork) {
+      jobTitles += "Yard Work  "
+    }
+    return jobTitles;
+  }
 
 
 
@@ -65,15 +98,12 @@ class Search extends Component {
               <div className="container">
                 <div className="z-depth-1 grey lighten-4 row" >
                   <form className="col s12">
-                     <a herf= "/view" className="indigo-text"> Or view all jobs available</a>
+                     <a href= "/view" className="indigo-text"> Or view all jobs available</a>
                         <div className='row'>
                           <div className='input-field col s12'>
                             <span class="input-group-text"> Select the type of work you're seeking below</span>
                           </div>
-
-                          <label className="indigo-text">Check all that apply</label>
                         </div>
-
                         <div className='row'>
                           <label> 
                             <input type="checkbox" ref="carpentry" name="carpentry" checked={this.state.carpentry} onChange={this.handleInputChange}/>
@@ -112,13 +142,20 @@ class Search extends Component {
                   <div className="section">
                 
                     {this.state.jobs.length ? (
-              <div className="z-depth-1 grey lighten-4 row">
+              <div className="z-depth-1 grey lighten-4 col s12">
                 {this.state.jobs.map(job => (
-                  <div className="z-depth-1 grey lighten-4 row" key={job._id} >
-                  
+                  <div className="z-depth-1 grey lighten-4 col s12" key={job._id}>
+                  <strong><h6 > UBERHELP <i class="material-icons">home</i></h6></strong>
+                   <strong>Skills:</strong> {this.jobType(job)}
 
+                    {/* Skills: {job.} */}
+                    <br></br>
+                    <strong>Job Details:</strong> {job.jobDetails}
+                    <br></br>
+                    <strong> Location: </strong> {job.city}, {job.state}
 
                   </div>
+                 
                 ))}
               </div>  
               ) : (

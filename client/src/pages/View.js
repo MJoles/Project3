@@ -58,11 +58,13 @@ class View extends Component {
               <div className="z-depth-1 grey lighten-4 row">
                 {this.state.jobs.map(job => (
                   <div className="z-depth-1 grey lighten-4 row" key={job._id} >
-                  Skills: {this.jobType(job)}
+                 <strong><h6 > UBERHELP <i class="material-icons">home</i></h6></strong>
+
+                 <strong>Skills: </strong> {this.jobType(job)}
                   <br></br>
-                  Job Details: {job.jobDetails}
+                  <strong>Job Details:</strong> {job.jobDetails}
                   <br></br>
-                  Location: {job.city}, {job.state}
+                  <strong>Location:</strong> {job.city}, {job.state}
 
 
                   </div>
