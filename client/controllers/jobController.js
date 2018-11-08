@@ -8,6 +8,34 @@ module.exports = {
       .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
+  }, 
+  findCarpentry: function(req, res){
+    db.Offer
+      .find({carpentry: {$ne: false}})
+      .sort({ date: -1 })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+   findYardwork: function(req, res){
+    db.Offer
+      .find({yardwork: {$ne: false}})
+      .sort({ date: -1 })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+   findElectrician: function(req, res){
+    db.Offer
+    .find({electrician: {$ne: false}})
+    .sort({ date: -1 })
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
+  },
+  findPlumbing: function(req, res){
+    db.Offer
+    .find({plumbing: {$ne: false}})
+    .sort({ date: -1 })
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
   },
   findById: function(req, res) {
     db.Offer
