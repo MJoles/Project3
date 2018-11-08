@@ -15,6 +15,23 @@ class View extends Component {
     this.jobImport();
   }
 
+  jobType(job) {
+    var jobTitles = ""
+    if(job.carpentry) {
+      jobTitles += "Carpentry  "
+    }
+    if(job.plumbing) {
+      jobTitles += "Plumbing  "
+    }
+    if(job.electrician) {
+      jobTitles += "Electrician  "
+    }
+    if(job.yardwork) {
+      jobTitles += "Yard Work  "
+    }
+    return jobTitles;
+  }
+
 
   jobImport = event => {    
     API.getJobs()
@@ -41,6 +58,8 @@ class View extends Component {
               <div className="z-depth-1 grey lighten-4 row">
                 {this.state.jobs.map(job => (
                   <div className="z-depth-1 grey lighten-4 row" key={job._id} >
+                  Skills: {this.jobType(job)}
+                  <br></br>
                   Job Details: {job.jobDetails}
                   <br></br>
                   Location: {job.city}, {job.state}
