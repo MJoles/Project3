@@ -17,23 +17,23 @@ class Home extends Component {
         <br/>
 
           <div className='row'>
-            <button type="button" class="col s12 btn btn-large waves-effect black ">Job Listings
-              <label className="indigo-text">(All job postings)</label> 
-            </button>              
+            <a href="/view"><button type="button" class="col s12 btn btn-large waves-effect black ">Job Listings
+              <label className="indigo-text"> (All job postings)</label> 
+            </button></a>              
           </div>
             <br/>
 
           <div className='row'> 
-            <button type="button" class="col s12 btn btn-large waves-effect black ">Need Help
+          <a href="/search"><button type="button" class="col s12 btn btn-large waves-effect black ">Search Help
               <label className="indigo-text">(Search job postings)</label> 
-            </button>
-          </div>
+            </button></a>
+          </div> 
             <br/>
 
           <div className='row'> 
-            <button type="sumbit" className="col s12 btn btn-large waves-effect black">Offer Help
-              <label className="indigo-text">(Post a job)</label> 
-            </button>
+            <a href="/jobs"> <button type="sumbit" className="col s12 btn btn-large waves-effect black">Offer Help
+              <label className="indigo-text">(Post a job)</label>
+            </button></a>
           </div>
 
       </div>

@@ -140,33 +140,32 @@ class Search extends Component {
                 </div>
               </div>
             </center>
+            <center>
                   <div className="section">
                 
                     {this.state.jobs.length ? (
-              <div className="z-depth-1 grey lighten-4 col s12">
+              <div className="z-depth-1 grey lighten-2 col s12">
                 {this.state.jobs.map(job => (
                   <div className="z-depth-1 grey lighten-4 col s12" key={job._id}>
                   <strong><h6 > UBERHELP <i class="material-icons">home</i></h6></strong>
                    <strong>Skills:</strong> {this.jobType(job)}
 
-                    {/* Skills: {job.} */}
                     <br></br>
                     <strong>Job Details:</strong> {job.jobDetails}
                     <br></br>
                     <strong> Location: </strong> {job.city}, {job.state}
-
                   </div>
-                 
+
                 ))}
               </div>  
               ) : (
                 <h3> No jobs yet</h3>
               )}
-                  </div>
+              </div>
+              </center>
           </Col>
      </div>
     );
   }
 }
-
 export default Search;

@@ -55,7 +55,7 @@ class View extends Component {
                 <h5 className="black-text">Here are your results! Good Luck!</h5>
               <div className="container">
               {this.state.jobs.length ? (
-              <div className="z-depth-1 grey lighten-4 row">
+              <div className="z-depth-1 grey lighten-2 row">
                 {this.state.jobs.map(job => (
                   <div className="z-depth-1 grey lighten-4 row" key={job._id} >
                  <strong><h6 > UBERHELP <i class="material-icons">home</i></h6></strong>
