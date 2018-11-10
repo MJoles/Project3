@@ -16,7 +16,11 @@ router.route("/getPlumbers")
     .get(jobController.findPlumbing)
     
 router.route("/getYardworkers")
+<<<<<<< HEAD
     .get(jobController.findYardwork);
+=======
+    .get(jobController.findYardwork)
+>>>>>>> mandy
 
 router.route("/view")
     .get(jobController.findAll);
