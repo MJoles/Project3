@@ -16,7 +16,7 @@ router.route("/getPlumbers")
     .get(jobController.findPlumbing)
     
 router.route("/getYardworkers")
-    .get(jobController.findYardwork);
+    .get(jobController.findYardwork)
 
 router.route("/view")
     .get(jobController.findAll);

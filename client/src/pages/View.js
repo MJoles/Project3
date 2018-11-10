@@ -52,7 +52,7 @@ class View extends Component {
             </Jumbotron>
       
             <center>   
-                <h5 className="black-text">Here are your results! Good Luck!</h5>
+                <h5 className="black-text"> <strongest>All Current Job Listings</strongest></h5>
               <div className="container">
               {this.state.jobs.length ? (
               <div className="z-depth-1 grey lighten-2 row">
@@ -64,9 +64,9 @@ class View extends Component {
                   <br></br>
                   <strong>Job Details:</strong> {job.jobDetails}
                   <br></br>
-                  Location: {job.city}, {job.state}
+                  <strong>Location:</strong> {job.city}, {job.state}
                   <br></br>
-                  Email: {job.email}
+                  <strong>Email:</strong> {job.email}
 
 
                   </div>
