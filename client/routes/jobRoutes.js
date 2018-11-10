@@ -9,13 +9,13 @@ router.route("/jobs")
 router.route("/findCarpenters")
     .get(jobController.findCarpentry)
 
-router.route("/getElectricians")
+router.route("/findElectricians")
     .get(jobController.findElectrician)
 
-router.route("/getPlumbers")
+router.route("/findPlumbers")
     .get(jobController.findPlumbing)
     
-router.route("/getYardworkers")
+router.route("/findYardworkers")
     .get(jobController.findYardwork);
 
 router.route("/view")

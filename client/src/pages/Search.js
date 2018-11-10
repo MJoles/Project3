@@ -36,6 +36,7 @@ class Search extends Component {
 
       axios.get("/findYardworkers",)
         .then(res => {
+          console.log(res)
           this.setState({
           jobs: res.data
         })
