@@ -105,6 +105,7 @@ class Search extends Component {
                             <span class="input-group-text"> Select the type of work you're seeking below</span>
                           </div>
                         </div>
+
                         <div className='row'>
                           <label> 
                             <input type="checkbox" ref="carpentry" name="carpentry" checked={this.state.carpentry} onChange={this.handleInputChange}/>
@@ -168,4 +169,5 @@ class Search extends Component {
     );
   }
 }
+
 export default Search;

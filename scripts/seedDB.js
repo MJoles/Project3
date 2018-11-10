@@ -17,6 +17,7 @@ const jobSeed = [
     jobDetails: "Yardwork including mowing grass, raking leaves and shoveling snow. Plumbing skills are beginner level.",
     city: "Chicago",
     state: "Illinois",
+    email: "johnjones@gmail.com",
     date: new Date(Date.now())
   },
   {
@@ -27,6 +28,7 @@ const jobSeed = [
     jobDetails: "Willing to provide any yardwork service including but not limited to raking leaves, mowing grass, shoveling snow and dog waste removal.",
     city: "Chicago",
     state: "Illinois",
+    email: "johnjones@gmail.com",
     date: new Date(Date.now())
   },
   {
@@ -37,6 +39,7 @@ const jobSeed = [
     jobDetails: "Various skill sets in plumbing, carpentry as well as electrical. Able to mount TVS and any at home handyman project.",
     city: "Chicago",
     state: "Illinois",
+    email: "johnjones@gmail.com",
     date: new Date(Date.now())
   },
   {
@@ -47,6 +50,7 @@ const jobSeed = [
     jobDetails: "Yardwork including mowing grass, raking leaves and shoveling snow. Plumbing skills are beginner level.",
     city: "Chicago",
     state: "Illinois",
+    email: "johnjones@gmail.com",
     date: new Date(Date.now())
   },
   {
@@ -57,6 +61,7 @@ const jobSeed = [
     jobDetails: "Yardwork including mowing grass, raking leaves and shoveling snow. Plumbing skills are beginner level.",
     city: "Chicago",
     state: "Illinois",
+    email: "johnjones@gmail.com",
     date: new Date(Date.now())
   },
   // {
