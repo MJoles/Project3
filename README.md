@@ -2,9 +2,14 @@
 
 # By Torrence, Mandy and Carlos
 
-* UberHelp! Is a web application intended for the community users live at. The app’s goal is for users to find help for home related tasks such as carpentry, yard work, plumbing and electrical related tasks. The app is intended to connect the community by making it easy to find the skills-sets that are needed close.
+# UberHelp! 
+* The app’s #1 goal is for users to find help for home related tasks such as carpentry, yard work, plumbing and electrical related tasks from users that offer these services.
 
-* In addition, the idea behind UberHelp! Is to give helpers the liberty to work when they want at the price they deem fair. The users will be able to go to the app, submit their skill set and wait for Customers to call them. Customers will find it easy to find the skills they need to fix an electrical problem at their residence, or simply yard-work related tasks.
+* The app’s #2 goal is to connect the community by making it easy to find the skills-sets that are needed close by.
+
+* The App’s #3 goal is to give the users the ability and freedom to chose when to work. 
+
+* In addition, the idea behind UberHelp! Is to give helpers the liberty to work when they want at the price they deem fair. The users will be able to go to the app, submit their skill set and wait for Customers to contact them. Customers will find it easy to find the skills they need to fix an electrical problem at their residence, or simply yard-work related tasks.
 
 # UberHelp! Web app functionality:
 
