@@ -33,7 +33,6 @@ class Search extends Component {
     event.preventDefault();
 
     if(this.state.yardwork === true){
-
       axios.get("/findYardworkers",)
         .then(res => {
           console.log(res)
@@ -160,7 +159,7 @@ class Search extends Component {
                 ))}
               </div>  
               ) : (
-                <h3> No jobs yet</h3>
+                <h4> No jobs to display</h4>
               )}
               </div>
               </center>

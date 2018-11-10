@@ -14,6 +14,7 @@ class Post extends Component {
     jobDetails: "",
     city: "",
     state: "",
+    email: ""
   };
 
   handleInputChange = event => {
@@ -89,24 +90,28 @@ class Post extends Component {
                         </div>
                         <div className='row'>
                           <div className='input-field col s12'>
-                            <textarea className='validate' type='text'  value={this.state.jobDetails} onChange={this.handleInputChange} name='jobDetails' id='details' placeholder="prices, notes, etc."/>
+                            <textarea className='validate' type='text'
+                            value={this.state.jobDetails} onChange={this.handleInputChange} name='jobDetails' id='details' placeholder="prices, notes, etc."/>
                               <label for="details">Job Details</label>
                           </div>
                         </div>
                         <div className='row'>
                       <div class="input-field col s6">
-                        <input id="city" type="text" class="validate" value={this.state.city} onChange={this.handleInputChange} name='city' placeholder="City"/>
+                        <input id="city" type="text" class="validate"
+                        value={this.state.city} onChange={this.handleInputChange} name='city' placeholder="City"/>
                           <label for="first_name">City</label>
                       </div>
                       <div class="input-field col s6">
-                        <input id="state" type="text" class="validate" value={this.state.state} onChange={this.handleInputChange} name='state' placeholder="State"/>
+                        <input id="state" type="text" class="validate"
+                        value={this.state.state} onChange={this.handleInputChange} name='state' placeholder="State"/>
                           <label for="last_name">State</label>
                       </div> 
                     </div> 
                         <div className='row'>
                           <div class="input-field col s12">
-                            <input className='validate' type='tel' name='phone_number' id='phone_number' placeholder="(xxx)-xxx-xxxx" />
-                              <label for="phone_number">Phone Number</label>
+                            <input id="email" type='text' class='validate'
+                            value={this.state.email} onChange={this.handleInputChange} name='email' placeholder="email@me.com" />
+                              <label for="email">Email</label>
                           </div>
                         </div>
                         <div className='row'>
