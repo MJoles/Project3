@@ -63,6 +63,8 @@ class View extends Component {
                   Job Details: {job.jobDetails}
                   <br></br>
                   Location: {job.city}, {job.state}
+                  <br></br>
+                  Email: {job.email}
 
 
                   </div>
