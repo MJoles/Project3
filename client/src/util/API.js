@@ -16,5 +16,18 @@ export default {
   // Saves a job to the database
   saveJobs: function(jobData) {
     return axios.post("/jobs", jobData);
+  },
+  // get carpenters
+  getCarpenters: function() {
+    return axios.get("/getCarpenters")
+  },
+  getElectricians: function() {
+    return axios.get("/getElectricians")
+  },
+  getPlumbers: function() {
+    return axios.get("/getPlumbers")
+  },
+  getYardworkers: function() {
+    return axios.get("/getYardworkers")
   }
 };
