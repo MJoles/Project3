@@ -15,6 +15,23 @@ class View extends Component {
     this.jobImport();
   }
 
+  jobType(job) {
+    var jobTitles = ""
+    if(job.carpentry) {
+      jobTitles += "Carpentry  "
+    }
+    if(job.plumbing) {
+      jobTitles += "Plumbing  "
+    }
+    if(job.electrician) {
+      jobTitles += "Electrician  "
+    }
+    if(job.yardwork) {
+      jobTitles += "Yard Work  "
+    }
+    return jobTitles;
+  }
+
 
   jobImport = event => {    
     API.getJobs()
@@ -38,12 +55,16 @@ class View extends Component {
                 <h5 className="black-text">Here are your results! Good Luck!</h5>
               <div className="container">
               {this.state.jobs.length ? (
-              <div className="z-depth-1 grey lighten-4 row">
+              <div className="z-depth-1 grey lighten-2 row">
                 {this.state.jobs.map(job => (
                   <div className="z-depth-1 grey lighten-4 row" key={job._id} >
-                  Job Details: {job.jobDetails}
+                 <strong><h6 > UBERHELP <i class="material-icons">home</i></h6></strong>
+
+                 <strong>Skills: </strong> {this.jobType(job)}
                   <br></br>
-                  Location: {job.city}, {job.state}
+                  <strong>Job Details:</strong> {job.jobDetails}
+                  <br></br>
+                  <strong>Location:</strong> {job.city}, {job.state}
 
 
                   </div>
